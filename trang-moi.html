@@ -162,7 +162,8 @@
             </div>
             <div class="payment-inputs" style="padding-left: 46%; margin-top: 2%;">
                 <div style="display: flex; align-items: center;">
-                    <img width="22" height="22" src="https://img.icons8.com/material-rounded/24/us-dollar.png" alt="us-dollar"/>
+                    <img width="22" height="22" src="https://img.icons8.com/material-rounded/24/us-dollar.png"
+                        alt="us-dollar" />
                     <input type="text" style="text-align: center;" class="inputs" id="user" placeholder="0.00"
                         onkeyup="checkInput()" />
                 </div>
@@ -186,6 +187,7 @@
         }
         function checkInput() {
             var userInput = document.getElementById("user").value;
+            userInput.style.textDecoration = "none";
             var nextButton = document.getElementById("nextButton");
 
             if (userInput.trim() === "" || userInput.trim() == null) {
