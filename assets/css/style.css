@@ -21,7 +21,7 @@ html {
 }
 
 #header {
-    height: 50px;
+    height: 65px;
     background-color: #0b5091;
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ html {
 }
 
 .nav {
-    margin: 0;
+    margin-top: 12px;
     display: flex;
     list-style-type: none;
 }
@@ -59,12 +59,13 @@ html {
     text-decoration: none;
     padding: 0 24px;
     display: block;
-    line-height: 50px;
+    line-height: 35px;
 }
 
-.nav>li:hover {
+/* .nav>li:hover {
     background-color: #102663;
-}
+    padding-top: 1px;
+} */
 
 #header .mobile-menu-btn {
     position: absolute;
@@ -181,9 +182,9 @@ html {
     cursor: pointer;
 }
 
-.button:hover {
+/* .button:hover {
     opacity: 0.7;
-}
+} */
 
 
 /* Mobile */
