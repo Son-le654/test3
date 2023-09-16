@@ -88,7 +88,12 @@
             <ul class="nav">
                 <img src="./assets/img/logo.png" alt="" class="logo">
                 <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Home</a></li>
-                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Send</a></li>
+                <li id="send-items" font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif"
+                    style="font-weight: bold; font-size: 17px; border-radius: 15px;  margin-right: 2rem;"><a id="send-link"
+                        href="index.html">
+                        <p>Send</p>
+                    </a>
+                </li>
                 <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Wallet</a>
                 </li>
                 <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Activity</a>
@@ -149,7 +154,7 @@
 
             if (userInput.trim() === "" || userInput.trim() == null) {
                 nextButton.disabled = true;
-                nextButton.style.backgroundColor = "white"; // Đổi màu nền thành trắng
+                nextButton.style.backgroundColor = "#E0E0E0"; // Đổi màu nền thành trắng
                 nextButton.style.color = "black"; // Đổi màu chữ thành đen
                 nextButton.style.boxShadow = "0 0 5px  rgba(53, 52, 52, 0.2)"; // Đổ bóng đỏ khi tắt
 
