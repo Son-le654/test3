@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Define a CSS class for the "payment" font */
+
+
+        #menu {
+            color: #003087;
+        }
+
+        /* Hiệu ứng bóng đổ cho mục "Send" */
+        #send-item {
+            box-shadow: 0px 0px 10px rgba(53, 52, 52, 0.2);
+        }
+
+        #send-items {
+            /* Đây là các thuộc tính CSS để đổ bóng */
+            box-shadow: 0px 0px 10px rgba(53, 52, 52, 0.2);
+            /* Đổi giá trị tùy ý */
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            /* Can be adjusted for alignment */
+        }
+
+        #menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li {
+
+            /* Khoảng cách giữa các mục menu */
+
+            padding: 5%;
+            border-radius: 8px;
+        }
+
+        #menu li a {
+            font-family: "";
+            text-decoration: none;
+            /* Loại bỏ gạch chân */
+            color: inherit;
+            /* Sử dụng màu chữ mặc định */
+        }
+
+        .payment-input {
+            margin-left: 7rem;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0.5rem;
+        }
+
+        .input {
+            padding-left: 2.5%;
+            /* Đảm bảo khoảng cách phù hợp giữa biểu tượng và nội dung nhập */
+            width: 44%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app" style="margin-bottom: 1%;">
+        <div id="header">
+            <ul class="nav">
+                <img src="./assets/img/logo.png" alt="" class="logo">
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Home</a></li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Send</a></li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Wallet</a>
+                </li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Activity</a>
+                </li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Help</a></li>
+            </ul>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="send-item" style="padding-top: 4.3%;padding-bottom: 2rem;">
+        <div class="col" style="display: inline-block; margin-left: 10%;">
+             <ul id="menu">
+                <li id="send-items" font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif"
+                    style="font-weight: bold; font-size: 17px;  margin-right: 2rem;"><a id="send-link" href="index.html"><p>Send</p></a>
+                </li>
+                <li font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif" style=" font-weight:
+                    bold; font-size: 17px; margin-right: 2rem;"><a href="#"><p>Request</p></a></li>
+                <li font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif" style=" font-weight:
+                    bold;font-size: 17px;  margin-right: 2rem;"><a href="#"><p>Contacts</p></a></li>
+                <li font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif" style=" font-weight:
+                    bold; font-size: 17px; margin-right: 2rem;"><a href="#"><p>More</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="payment">
+        <p class="payment-desc text-lg lg:text-lg" style="margin-left: 7rem; font-size: 30px;"
+            font-family="PayPalSansBig-Regular, 'Helvetica Neue', Helvetica, sans-serif">Send payment to
+        </p>
+        <div class="payment-input" style="margin-left: 7rem;">
+            <div class="input-container">
+                <div class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </div>
+                <input type="text" class="input" id="user" placeholder="  Name, @username, email, or mobile"
+                    onkeyup="checkInput()" />
+            </div>
+        </div>
+        <button style="margin-left: 7rem;" class="button" id="nextButton" onclick="navigateToNewPage()"
+            disabled>Next</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Gọi hàm checkInput() khi trang web được tải
+            checkInput();
+        });
+
+        function checkInput() {
+            var userInput = document.getElementById("user").value;
+            var nextButton = document.getElementById("nextButton");
+
+            if (userInput.trim() === "" || userInput.trim() == null) {
+                nextButton.disabled = true;
+                nextButton.style.backgroundColor = "white"; // Đổi màu nền thành trắng
+                nextButton.style.color = "black"; // Đổi màu chữ thành đen
+                nextButton.style.boxShadow = "0 0 5px  rgba(53, 52, 52, 0.2)"; // Đổ bóng đỏ khi tắt
+
+            } else {
+                nextButton.disabled = false;
+                nextButton.style.backgroundColor = ""; // Sử dụng màu nền mặc định
+                nextButton.style.color = ""; // Sử dụng màu chữ mặc định
+            }
+        }
+        function navigateToNewPage() {
+            var button = document.querySelector(".button");
+            button.innerHTML = "Processing...";
+            const userValue = document.getElementById("user").value;
+            setTimeout(function () {
+                window.location.href = "trang-moi.html?user=" + encodeURIComponent(userValue);
+            }, 2000);
+        }
+    </script>
+    <!-- Link tới Bootstrap JS và Popper.js (nếu cần) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

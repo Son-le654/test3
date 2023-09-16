@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./assets/css/success.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Define a CSS class for the "payment" font */
+
+
+        #menu {
+            color: #003087;
+        }
+
+        /* Hiệu ứng bóng đổ cho mục "Send" */
+        #send-item {
+            box-shadow: 0px 0px 10px rgba(53, 52, 52, 0.2);
+        }
+
+        #send-items {
+            /* Đây là các thuộc tính CSS để đổ bóng */
+            box-shadow: 0px 0px 10px rgba(53, 52, 52, 0.2);
+            /* Đổi giá trị tùy ý */
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            /* Can be adjusted for alignment */
+        }
+
+        #menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li {
+
+            /* Khoảng cách giữa các mục menu */
+
+            padding: 5%;
+            border-radius: 8px;
+        }
+
+        #menu li a {
+            font-family: "";
+            text-decoration: none;
+            /* Loại bỏ gạch chân */
+            color: inherit;
+            /* Sử dụng màu chữ mặc định */
+        }
+
+        .payment-input {
+            margin-left: 7rem;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0.5rem;
+        }
+
+        .custom-button {
+            background-color: transparent;
+            /* Đặt nền trong suốt */
+            border: none;
+            /* Loại bỏ viền */
+            color: black;
+            /* Đặt màu chữ là trắng */
+            padding: 10px 20px;
+            /* Điều chỉnh kích thước nút theo ý muốn */
+            text-align: center;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 2%;
+            text-decoration: none;
+            /* Loại bỏ gạch chân cho liên kết */
+            cursor: pointer;
+            /* Biểu tượng con trỏ khi di chuột qua nút */
+        }
+
+        .success-page {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .input {
+            padding-left: 2.5%;
+            /* Đảm bảo khoảng cách phù hợp giữa biểu tượng và nội dung nhập */
+            width: 44%;
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="app" style="margin-bottom: 1%;">
+        <div id="header">
+            <ul class="nav">
+                <img src="./assets/img/logo.png" alt="" class="logo">
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Home</a></li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Send</a></li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Wallet</a>
+                </li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Activity</a>
+                </li>
+                <li font-family="PayPalSansBig-Light, 'Helvetica Neue', Helvetica, sans-serif"><a href="#">Help</a></li>
+            </ul>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="send-item" style="padding-top: 4.3%;padding-bottom: 2rem;">
+        <div class="col" style="display: inline-block; margin-left: 10%;">
+            <ul id="menu">
+                <li id="send-items" font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif"
+                    style="font-weight: bold; font-size: 17px;  margin-right: 2rem;"><a id="send-link"
+                        href="index.html">
+                        <p>Send</p>
+                    </a>
+                </li>
+                <li font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif" style=" font-weight:
+                    bold; font-size: 17px; margin-right: 2rem;"><a href="#">
+                        <p>Request</p>
+                    </a></li>
+                <li font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif" style=" font-weight:
+                    bold;font-size: 17px;  margin-right: 2rem;"><a href="#">
+                        <p>Contacts</p>
+                    </a></li>
+                <li font-family="PayPalSansSmall-Medium, 'Helvetica Neue', Helvetica, sans-serif" style=" font-weight:
+                    bold; font-size: 17px; margin-right: 2rem;"><a href="#">
+                        <p>More</p>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="payment-desc text-lg lg:text-lg" style="margin-left: 40%; margin-top: 2rem; font-size: 24px; display: block;" id="nono"
+        font-family="PayPalSansBig-Regular, 'Helvetica Neue', Helvetica, sans-serif">Processing payment...
+    </p>
+    <div class="success-page" style="margin-top: 25%; display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="#159E2B" class="bi bi-check-circle"
+            viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+        </svg>
+        <p style="margin-top: 1.2rem;" class="desc">You've sent <span id="amount"></span> USD to <span
+                id="recipient"></span>.</p>
+        <button class="button" onclick="returnToHomePage()">Send more money</button>
+        <button class="custom-button" onclick="returnToHomePage()">Go to summary</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const recipient = params.get("user");
+        const amount = params.get("amount");
+
+        if (recipient && amount) {
+            document.getElementById("recipient").textContent = recipient;
+            document.getElementById("amount").textContent = amount;
+        }
+
+        function returnToHomePage() {
+            // Chuyển hướng người dùng về trang chính (trang ban đầu)
+            window.location.href = "index.html";
+        }
+        function showSuccessPage() {
+            // Chọn đối tượng div success-page
+            var successPage = document.querySelector('.success-page');
+
+            // Hiển thị nội dung bằng cách thiết lập thuộc tính CSS display thành 'block'
+            successPage.style.display = 'block';
+        }
+
+
+        // Đợi 2 giây trước khi gọi hàm showSuccessPage
+        setTimeout(showSuccessPage, 2000); // 2000 milliseconds = 2 giây
+        function hidePaymentProcessing() {
+            // Chọn phần tử <p> cần ẩn
+            var paymentProcessing = document.getElementById('nono');
+
+            // Ẩn phần tử bằng cách thiết lập thuộc tính CSS display thành 'none'
+            paymentProcessing.style.display = 'none';
+        }
+
+        // Gọi hàm hidePaymentProcessing sau 0,2 giây (200 milliseconds)
+        setTimeout(hidePaymentProcessing, 1900);
+    </script>
+</body>
+
+</html>

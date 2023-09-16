@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'TenFont';
+}
+
+
+@font-face {
+    font-family: 'TenFont';
+    /* Tên của font, bạn có thể đặt tên tùy ý */
+    src: url('../../paypal-sans-font/PayPalSansSmall-Medium-Klim.ttf') format('woff');
+    /* Đường dẫn tới tệp font và định dạng của nó */
+    /* Bổ sung các thuộc tính font khác nếu cần */
+}
+
+
+html {
+    font-family: helvetica, arial, helvetica;
+    scroll-behavior: smooth;
+}
+
+#header {
+    height: 50px;
+    background-color: #102663;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 40px;
+}
+
+
+.nav>li {
+    display: inline-block;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav>li>a {
+    color: #fff;
+}
+
+.nav li a {
+    text-decoration: none;
+    padding: 0 24px;
+    display: block;
+    line-height: 50px;
+}
+
+.nav>li:hover {
+    background-color: #102663;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    padding: 0 21px;
+    display: none;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.payment {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: -2rem;
+    padding: 50px;
+}
+
+.payment-monney {
+    font-size: 40px;
+}
+
+.payment-desc {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.payment-input {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+.payment-inputs {
+    font-size: 16px;
+}
+.input-name {
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.input {
+    width: 600px;
+    padding: 10px 20px;
+    border: 2px solid #263286;
+    border-radius: 18px;
+    outline: none;
+    font-size: 16px;
+}
+.inputs {
+    width: 90px;
+    padding: 4px 20px;
+    border: 2px solid #57565B;
+    border-radius: 18px;
+    outline: none;
+    font-size: 16px;
+}
+
+.money-transfer {
+    height: 30px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+.custom-box {
+    background-color: #DCDCE0;
+    padding: 5px;
+    border-radius: 12px;
+    color: black;
+    display: inline-block;
+}
+
+#transfer {
+    margin-right: 25px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.currency {
+    border: 1px solid #000;
+    padding: 2px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: transparent;
+    border-radius: 16px;
+    background-color: #061669;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.buttons {
+    width: 20%;
+    padding: 10px;
+    border: transparent;
+    border-radius: 16px;
+    background-color: #061669;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+
+/* Mobile */
+@media (max-width: 670px) {
+    #header {
+        overflow: hidden;
+    }
+
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav li a {
+        padding: 1px 24px;
+    }
+
+    .nav>li {
+        display: block;
+    }
+
+    .nav>li:first-child {
+        display: inline-block;
+    }
+
+    .payment-monney {
+        font-size: 30px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+}
