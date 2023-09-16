@@ -22,7 +22,7 @@ html {
 
 #header {
     height: 50px;
-    background-color: #056AB8;
+    background-color: #0b5091;
     position: fixed;
     top: 0;
     left: 0;
@@ -128,12 +128,12 @@ html {
     font-size: 16px;
 }
 .inputs {
-    width: 90px;
-    padding: 4px 20px;
+    width: 70px;
+    padding: -2px 0px;
     border: 2px solid #57565B;
     border-radius: 18px;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .money-transfer {
