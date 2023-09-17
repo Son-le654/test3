@@ -168,13 +168,19 @@
                     <input type="text" style="text-align: center;" class="inputs" id="user" placeholder="0.00"
                         onkeyup="checkInput()" />
                 </div>
-                <div style="padding-left: 2.2%; margin-top: 1rem;"><span class="custom-box">USD</span></div>
+                <div style="padding-left: 2.1%; margin-top: 1rem;"><span class="custom-box">USD</span></div>
             </div>
         </div>
         <h4 style="padding-left: 30%;">+ What this payment for?</h4>
-        <h4 style="padding-left: 38%; margin-top: 5%; align-items: center;"><span style="opacity: 0.84;">For more
-                information please read our
-            </span> <span style="font-weight: bold;">user agreement</span>.</h4>
+        <div class="container" style="margin-top: 5%;">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <h4 class="text-center">
+                      <span style="opacity: 0.85;">  For more information please read our </span> <span class="font-weight-bold">user agreement</span>.
+                    </h4>
+                </div>
+            </div>
+        </div>
         <button style="display: block; margin: 0 auto; text-align: center; margin-top: 2%;" class="buttons"
             id="nextButton" onclick="navigateToNewPage()" disabled>Next</button>
         <button class="custom-button" onclick="returnToPreviousPage()">Cancel</button>
